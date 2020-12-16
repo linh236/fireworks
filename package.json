@@ -1,6 +1,10 @@
 {
   "name": "FireWork",
   "version": "1.0.0",
+  "engines": {
+  "npm": "6.14.5",
+  "node": "8.17.0"
+  },
   "description": "firework",
   "devDependencies": {
     "gulp-rename": "^1.2.2",
