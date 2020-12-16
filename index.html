@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
-        <title>Firework</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <style>
-            body{
-                margin:0;
-                width:100%;
-                height:100%;
-                overflow:hidden;
-                position:absolute;
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="mainCanvas" height=500 width=500></canvas>
-    </body>
-    <script src="dist/firework.min.js"></script>
-    <script>
-        $('#mainCanvas').firework({
-            speed:30,
-            time:30,
-            period:500,
-            fire:[[0,36]]
-        });
-        $(window).on('resize',function(){
-            $('#mainCanvas').setCanvas({});
-        });
-    </script>
+
+<head>
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" charset="UTF-8">
+  <title>HAPPY NEW YEAR 2021</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <script src="dist/firework.min.js"></script>
+</head>
+
+<body>
+  <div class="position-relative">
+    <div class="Timer position-absolute text-white"></div>
+    <canvas id="mainCanvas"></canvas>
+    <iframe src="https://www.nhaccuatui.com/mh/background/WwaehzZ8yV" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var start = new Date;
+      setInterval(function() {
+        $('.Timer').text(moment(new Date()).format('yyyy-MM-DD hh:mm:ss'));
+        // if(moment(new Date()).format('yyyy-MM-DD hh:mm:ss') == '2020-12-17 03:20:00'){
+        // }
+      }, 1000);
+      $('#mainCanvas').firework({
+        speed: 30,
+        time: 30,
+        period: 500,
+        fire: [
+          [0, 36]
+        ]
+      });
+      $(window).on('resize', function() {
+        $('#mainCanvas').setCanvas({});
+      });
+    })
+  </script>
+</body>
 </html>
