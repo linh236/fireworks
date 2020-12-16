@@ -10,6 +10,9 @@
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.1"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/i314i/FireWork.git"
@@ -20,5 +23,8 @@
     "plugin"
   ],
   "author": "Hung-I Chiu noootown",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
