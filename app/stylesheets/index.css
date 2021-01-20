@@ -1,0 +1,184 @@
+body{
+    margin:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:absolute;
+}
+.hpny {
+  font-family: futura;
+  font-style: italic;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #313131;
+  font-size: 45px;
+  font-weight: bold;
+  position: absolute;
+  -webkit-animation: colorchange 20s infinite alternate;
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: blue;
+  }
+  10% {
+    color: #8e44ad;
+  }
+  20% {
+    color: #1abc9c;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #34495e;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #f1c40f;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}
+.lucky {
+  font-family: futura;
+  font-style: italic;
+  width: 8%;
+  margin: 0 auto;
+  padding: 2%;
+  text-align: center;
+  color: #313131;
+  font-size: 45px;
+  font-weight: bold;
+  position: fixed;
+  top: 0%;
+  left: 80%;
+  -webkit-text-emphasis: thistle;
+  -webkit-text-emphasis-position: under;
+  -webkit-text-emphasis-style: filled;
+  animation: color-change 1s infinite;
+}
+.lucky1 {
+  font-family: futura;
+  font-style: italic;
+  width: 8%;
+  margin: 0 auto;
+  padding: 2%;
+  text-align: center;
+  color: #313131;
+  font-size: 45px;
+  font-weight: bold;
+  position: fixed;
+  top: 0%;
+  left: 90%;
+  -webkit-text-emphasis: thistle;
+  -webkit-text-emphasis-position: under;
+  -webkit-text-emphasis-style: filled;
+  animation: color-change 1s infinite;
+}
+
+
+@keyframes color-change {
+  0% { color: red; }
+  10% {
+    color: #470ee4;
+  }
+  20% {
+    color: #b7b71c;
+  }  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  30% {
+    color: #d35400;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: blue;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #4c7a24;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}
+.marquee {
+  font-family: futura;
+  font-style: italic;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2%;
+  text-align: center;
+  color: #313131;
+  font-size: 45px;
+  font-weight: bold;
+  position: fixed;
+  top: 88%;
+  -webkit-text-emphasis: thistle;
+  -webkit-text-emphasis-position: under;
+  -webkit-text-emphasis-style: filled;
+  -webkit-animation: colors 20s infinite alternate;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    color: red;
+  }
+  10% {
+    color: #470ee4;
+  }
+  20% {
+    color: #b7b71c;
+  }
+  30% {
+    color: #ffb6ca;
+  }
+  40% {
+    color: blue;
+  }
+  50% {
+    color: #4cff70;
+  }
+  60% {
+    color: blue;
+  }
+  70% {
+    color: #2980b9;
+  }
+  80% {
+    color: #4c7a24;
+  }
+  90% {
+    color: #2980b9;
+  }
+  100% {
+    color: pink;
+  }
+}

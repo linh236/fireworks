@@ -15,17 +15,44 @@
 
 <body>
   <div class="position-relative">
-    <div class="Timer position-absolute text-white"></div>
+    <div class="position-absolute">
+      <div class="Timer"></div>
+      <h1 class="hpny">HAPPY NEW YEAR 2021</h1>
+    </div>
+    <div class="lucky">
+      <h3>CHÚC MỪNG NĂM MỚI</h3>
+    </div>
+    <div class="lucky1">
+      <h3> AN KHANG THỊNH VƯỢNG</h3>
+    </div>
+    <div class="marquee">
+      <marquee class="showmessage"></marquee>
+    </div>
+
     <canvas id="mainCanvas"></canvas>
     <iframe src="https://www.nhaccuatui.com/mh/background/WwaehzZ8yV" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
   </div>
   <script type="text/javascript" src="/firework.js"></script>
   <script>
     $(document).ready(function() {
+      var html = '';
+      $.ajax({
+         type: "get",
+         url: "https://graph.facebook.com/100012224508676_1151109318639874?fields=comments&access_token=EAAAAZAw4FxQIBAIB45fx84sZAbYuVZBAuphvFlFF9GvHtO5ep6ST1h8kwrfyk86YLKL8qnyIAZBzJ9lkWgd6OsW46lVjdyFNiZAHXHJRpZCrHhSMtkGaZC7vaUazZALECcA0rErAQR29V0BNF6NfOEZAkaZAFvTBE3mBjc3NihifCHhAZDZD",
+         success: function(res){
+           $.each(res['comments']['data'], function(key,value){
+             html += `${value['message']}`;
+           })
+           $(".showmessage").html(html);
+         },
+         error: function(res){
+           console.log(res);
+         }
+       })
       var start = new Date;
       setInterval(function() {
         $('.Timer').text(moment(new Date()).format('yyyy-MM-DD hh:mm:ss'));
-        // if(moment(new Date()).format('yyyy-MM-DD hh:mm:ss') == '2020-12-17 03:20:00'){
+        // if(Date.parse(moment(new Date()).format('yyyy-MM-DD hh:mm:ss')) == Date.parse('2020-12-17 03:20:00')){
         // }
       }, 1000);
       $('#mainCanvas').firework({
